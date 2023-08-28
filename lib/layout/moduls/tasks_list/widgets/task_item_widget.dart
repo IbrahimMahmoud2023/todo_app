@@ -62,7 +62,7 @@ class TaskItemWidget extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
                 color: AppTheme.primaryColor,
-                borderRadius: BorderRadius.circular(12.0)),
+                borderRadius: BorderRadius.circular(10.0)),
             child: Icon(
               Icons.check,
               size: 40,

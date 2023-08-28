@@ -1,6 +1,7 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:untitled/layout/moduls/add_task/add_task.dart';
 import 'package:untitled/layout/moduls/settings/settings_view.dart';
 import 'package:untitled/layout/moduls/tasks_list/tasks_list_view.dart';
 
@@ -31,8 +32,10 @@ class _HomeLayoutState extends State<HomeLayout> {
           shape: BoxShape.circle,
         ),
         child: FloatingActionButton(
-          onPressed: () {},
-          tooltip: ('increment'),
+          onPressed: () {
+            showAddTaskBottomSheet();
+          },
+          tooltip: ('add new task'),
           child: Icon(Icons.add),
         ),
       ),
@@ -58,6 +61,13 @@ class _HomeLayoutState extends State<HomeLayout> {
           ],
         ),
       ),
+    );
+  }
+
+  void showAddTaskBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => AddTask(), // تستخدم هنا واجهة AddTask
     );
   }
 }
