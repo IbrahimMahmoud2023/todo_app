@@ -7,6 +7,7 @@ import 'package:untitled/layout/moduls/splash/splash_view.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
