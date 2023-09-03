@@ -13,11 +13,11 @@ class TasksListView extends StatelessWidget {
       children: [
         Container(
           alignment: Alignment.centerLeft,
-          padding: EdgeInsets.only(top: 40, left: 20),
+          padding: const EdgeInsets.only(top: 40, left: 20),
           width: mediaQuery.width,
           height: mediaQuery.height * 0.15,
           color: AppTheme.primaryColor,
-          child: Text(
+          child: const Text(
             "To Do List",
             style: TextStyle(
               fontSize: 22,

@@ -26,7 +26,7 @@ class _SettingsViewState extends State<SettingsView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Text(
+               Text(
                 "Language",
                 textAlign: TextAlign.start,
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -102,10 +102,72 @@ class _SettingsViewState extends State<SettingsView> {
 
   void showlanguageBottomSheet() {
     showModalBottomSheet(
+      backgroundColor: Color(0XFFDFECDB),
       context: context,
-      builder: (context) => Container(
-        color: Color(0XFFDFECDB),
-        child: Padding(
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+        topRight: Radius.circular(20),
+        topLeft: Radius.circular(20),
+      )),
+      builder: (context) => Padding(
+        padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 20),
+        // padding: const EdgeInsets.all(8.0),
+        child: Container(
+          // color: Color(0XFFDFECDB),
+          child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'English',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
+                      Spacer(),
+                      Icon(
+                        Icons.check,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'عربي',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
+                      Spacer(),
+                      // Icon(Icons.check),
+                    ],
+                  )
+                ],
+              )),
+        ),
+      ),
+    );
+  }
+
+  void showThemeBottomSheet() {
+    showModalBottomSheet(
+      backgroundColor: Color(0XFFDFECDB),
+      context: context,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+        topRight: Radius.circular(20),
+        topLeft: Radius.circular(20),
+      )),
+      builder: (context) => Padding(
+        padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 20),
+        //  padding: const EdgeInsets.all(8.0),
+        child: Container(
+          // color: Color(0XFFDFECDB),
+          child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -113,14 +175,12 @@ class _SettingsViewState extends State<SettingsView> {
                 Row(
                   children: [
                     Text(
-                      'English',
+                      'Dark',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     Spacer(),
-                    Icon(
-                      Icons.check,
-                    ),
+                    // Icon(Icons.check),
                   ],
                 ),
                 SizedBox(
@@ -129,55 +189,17 @@ class _SettingsViewState extends State<SettingsView> {
                 Row(
                   children: [
                     Text(
-                      'عربي',
+                      'Light',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     Spacer(),
+                    Icon(Icons.check),
                     // Icon(Icons.check),
                   ],
                 )
               ],
-            )),
-      ),
-    );
-  }
-
-  void showThemeBottomSheet() {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => Container(
-        color: Color(0XFFDFECDB),
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  Text(
-                    'Dark',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                  ),
-                  Spacer(),
-                  // Icon(Icons.check),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Light',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                  ),
-                  Spacer(),
-                  Icon(Icons.check),
-                  // Icon(Icons.check),
-                ],
-              )
-            ],
+            ),
           ),
         ),
       ),
